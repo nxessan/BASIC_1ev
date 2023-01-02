@@ -1,0 +1,40 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,47,49)
+  Background = Color.Background
+  { Label1 Label
+    MoveScaled(2,6,12,4)
+    Text = ("Contraseña:")
+  }
+  { TBPassword TextBox
+    MoveScaled(13,6,31,4)
+    Text = ("Introduzca su contraseña")
+  }
+  { Label2 Label
+    MoveScaled(2,11,17,4)
+    Visible = False
+    Text = ("Nueva Contraseña:")
+  }
+  { TBnewPassword TextBox
+    MoveScaled(19,11,25,4)
+    Visible = False
+    Text = ("Introduzca su contraseña")
+  }
+  { BAbrir Button
+    MoveScaled(13,18,20,4)
+    Text = ("Abrir")
+  }
+  { BCambiar Button
+    MoveScaled(13,23,20,4)
+    Text = ("Cambiar Contraseña")
+  }
+  { BCerrar Button
+    MoveScaled(13,28,20,4)
+    Text = ("Cerrar")
+  }
+  { LResultado TextLabel
+    MoveScaled(4,35,37,8)
+    Background = Color.LightBackground
+  }
+}

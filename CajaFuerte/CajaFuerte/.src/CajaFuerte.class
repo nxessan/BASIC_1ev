@@ -1,0 +1,67 @@
+' Gambas class file
+
+' ESTADO / ATRIBUTOS
+' Queremos almacenar si está abierta o cerrada.
+
+Private cajaAbierta As Boolean 'cajaAbierta = True (el estado de la caja es cerrada)
+Private clave As String
+
+' COMPORTAMIENTOS / METODOS
+
+'Constructor (por clase)
+'El constructor normalmente inicializa los atributos con unos estados iniciales.
+
+Public Sub _new()  '--> Los valores dentro de los parentesis es para que los usuarios desde fuera me den los valores
+  'Inicializar los valores.
+  'No hace falta hacer ninguna operación, por eso es sub.
+  cajaAbierta = False 'Empieza cerrada
+  clave = "0000" 'Clave por defecto
+  
+End
+
+'Resto métodos
+'Abrir
+Public Function abrirCaja(pass As String) As Boolean
+  
+  If (pass = clave) Then
+    cajaAbierta = True
+    Return True
+  Endif
+  
+  Return False 
+  
+End
+
+'Clave nueva
+Public Function cambiarClave(oldPassword As String, newPassword As String) As Boolean 'Nos dira si es true, que todo ha salido bien. Si no, que algo ha salido mal. 
+  'Es function porque tiene un proceso con varias posibilidades devueltas.
+  'Se nos pedirán ambas claves desde fuera, una nos la dará el propio programa, la otra el usuario.
+  
+  cajaAbierta = False 'cierro la caja fuerte para cambiar la contraseña
+  
+  If (oldPassword = clave) Then
+     If (newPassword.len <> 4) Then 
+      Return False
+    Else 
+      clave = newPassword
+      Return True
+    Endif
+    Endif 
+  
+  
+  Return False
+  
+End
+
+
+'Cerrar
+Public Sub cerrarCaja() As Boolean
+  
+  If (cajaAbierta = True) Then
+    cajaAbierta = False
+    Return True
+  Endif
+  
+  Return False
+  
+End

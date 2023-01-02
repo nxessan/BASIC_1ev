@@ -1,0 +1,37 @@
+' Gambas class file
+
+Public Sub Button1_Click()
+  
+  Dim sumar As Integer
+
+  sumar = Val(Num1.Text) + Val(Num2.Text)
+  Button1.Text = sumar
+  
+End
+
+Public Sub Button2_Click()
+  
+  Dim restar As Integer
+
+  restar = Val(Num1.Text) - Val(Num2.Text)
+  Button2.Text = restar
+  
+End
+
+Public Sub Button3_Click()
+  
+  Dim multiplicar As Integer
+
+  multiplicar = Val(Num1.Text) * Val(Num2.Text)
+  Button3.Text = multiplicar
+  
+End
+
+Public Sub Button4_Click()
+
+  Dim dividir As Integer
+
+  dividir = Val(Num1.Text) / Val(Num2.Text)
+  Button4.Text = dividir
+
+End

@@ -1,0 +1,54 @@
+' Gambas class file
+
+Private miCaja As CajaFuerte
+
+Public Sub Form_Open()
+
+  miCaja = New CajaFuerte
+
+End
+
+Public Sub BAbrir_Click()
+  'Mirar si han puesto algo potable en el TBPassword
+  'Pasar la contraseña al objeto CajaFuerte
+  'Si me devuelve true, la caja debe estar abierta
+  'En otro caso, la password no va (false)
+  If (miCaja.abrirCaja(TBPassword.Text)) Then
+    LResultado.Text = "Todo ha ido bien. La caja ha sido abierta"
+  Else 
+    LResultado.Text = "Contraseña incorrecta"
+  Endif
+  
+End
+
+Public Sub BCambiar_Click()
+
+  TBNewpassword.Enabled = True
+
+  If (TBNewpassword.Enabled = True) Then 
+    
+    If (miCaja.cambiarClave(TBPassword.Text, TBNewpassword.Text)) Then
+      LResultado.Text = "La clave ha sido actualizada"
+    Else 
+      LResultado.Text = "La clave no se ha podido actualizar"
+    Endif
+    
+  Endif
+  TBNewpassword.Enabled = True
+  
+  If (TBNewpassword.Text <> "") Then
+    TBNewpassword.Enabled = False
+    TBNewpassword.Text = ""
+  Endif 
+End 
+  
+Public Sub BCerrar_Click()
+
+  If (miCaja.cerrarCaja()) Then
+    LResultado.Text = "La caja fuerte se ha cerrado correctamente"
+  Else 
+    LResultado.Text = "La caja permanece cerrada"
+  Endif
+
+End
+   

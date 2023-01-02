@@ -1,0 +1,48 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,74,48)
+  Background = &H7FBFFF&
+  { Label1 Label
+    MoveScaled(7,21,13,4)
+    Font = Font["Bold,+3"]
+    Text = ("Número 1")
+  }
+  { Num1 TextBox
+    MoveScaled(21,21,24,4)
+    Background = &HDFEFFF&
+    Text = (" ")
+  }
+  { Button1 Button
+    MoveScaled(49,14,16,4)
+    Foreground = Color.Black
+    Text = ("Sumar")
+  }
+  { Label2 Label
+    MoveScaled(7,29,14,4)
+    Font = Font["Bold,+3"]
+    Text = ("Número 2")
+  }
+  { Num2 TextBox
+    MoveScaled(21,29,24,4)
+    Background = &HDFEFFF&
+    Text = (" ")
+  }
+  { Button2 Button
+    MoveScaled(49,22,16,4)
+    Text = ("Restar")
+  }
+  { Button3 Button
+    MoveScaled(49,30,16,4)
+    Text = ("Multiplicar")
+  }
+  { Button4 Button
+    MoveScaled(49,38,16,4)
+    Text = ("Dividir")
+  }
+  { Label3 Label
+    MoveScaled(20,3,37,8)
+    Font = Font["Bold,Underline,+6"]
+    Text = ("CALCULADORA")
+  }
+}

@@ -1,0 +1,11 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,155,111)
+  Background = Color.Background
+  { LNombreHotel Label
+    MoveScaled(48,2,67,10)
+    Font = Font["Bold,+5"]
+    Text = ("HOTEL COSTA DEL SOL")
+  }
+}
